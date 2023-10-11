@@ -1,1 +1,262 @@
-function _0x9acf(){const _0x16316a=['display','pause_circle','selected','cardcontainer','volumen-off','12663jCyYBM','img','start-screen','add','className','getElementById','play','none','random','classList','loseSound','push','end-screen','log','winSound','win-short','4970DMjPSB','src','¡Las\x20cartas\x20son\x20diferentes!','is-flipped','createElement','70938HcdDVO','div','appendChild','turn','3799290MzAAjf','contador','assets/img','28276ovHNNl','/00.png','tiempo-total','floor','innerText','addEventListener','style','length','content-container','flex','innerHTML','722537PAjzuD','includes','363aaVkxr','toggle','card__face\x20card__face--front','getComputedStyle','2233632lyGDOi','click','539762GxMWPO','block','contains','3354EqokZw','matched'];_0x9acf=function(){return _0x16316a;};return _0x9acf();}const _0x538dd8=_0x352b;(function(_0x5223a1,_0x13a49e){const _0x4309ca=_0x352b,_0xc5bdcb=_0x5223a1();while(!![]){try{const _0x39bd42=-parseInt(_0x4309ca(0x181))/0x1+parseInt(_0x4309ca(0x189))/0x2+parseInt(_0x4309ca(0x183))/0x3*(-parseInt(_0x4309ca(0x176))/0x4)+-parseInt(_0x4309ca(0x173))/0x5+-parseInt(_0x4309ca(0x18c))/0x6*(parseInt(_0x4309ca(0x15a))/0x7)+-parseInt(_0x4309ca(0x187))/0x8+-parseInt(_0x4309ca(0x16f))/0x9*(-parseInt(_0x4309ca(0x16a))/0xa);if(_0x39bd42===_0x13a49e)break;else _0xc5bdcb['push'](_0xc5bdcb['shift']());}catch(_0x413635){_0xc5bdcb['push'](_0xc5bdcb['shift']());}}}(_0x9acf,0x887d0));function _0x352b(_0x3344b7,_0x537308){const _0x9acfd5=_0x9acf();return _0x352b=function(_0x352b26,_0xb6b769){_0x352b26=_0x352b26-0x15a;let _0x3f4bc6=_0x9acfd5[_0x352b26];return _0x3f4bc6;},_0x352b(_0x3344b7,_0x537308);}let gameStarted=![],flippedCardCount=0x0,paircardCount=0x0,pairOddCount=0x0,cardslist=[],cardsDicc={};const mainUrl=_0x538dd8(0x175);let selectedCard=null,selectedCardPosicion=null,clickCount=0x0;const winSound=document[_0x538dd8(0x15f)](_0x538dd8(0x168)),loseSound=document['getElementById'](_0x538dd8(0x164)),win_short=document[_0x538dd8(0x15f)](_0x538dd8(0x169));let volumen=!![],tiempoTotalJuego=0x0;function startGame(){const _0x3d0c2d=_0x538dd8;flippedCardCount=0x0,paircardCount=0x0,pairOddCount=0x0,cardslist=[],selectedCard=null,selectedCardPosicion=null,clickCount=0x0,tiempoTotalJuego=0x0,document[_0x3d0c2d(0x15f)]('content-container')[_0x3d0c2d(0x17c)][_0x3d0c2d(0x18e)]=_0x3d0c2d(0x18a),document[_0x3d0c2d(0x15f)](_0x3d0c2d(0x15c))[_0x3d0c2d(0x17c)]['display']=_0x3d0c2d(0x161),document[_0x3d0c2d(0x15f)](_0x3d0c2d(0x166))['style'][_0x3d0c2d(0x18e)]=_0x3d0c2d(0x161);const _0x5f3d58=document['getElementById'](_0x3d0c2d(0x191));_0x5f3d58[_0x3d0c2d(0x180)]='',gameStarted=!![],showcards();}function endGame(){const _0x400446=_0x538dd8;tiempoTotalJuego=tiempoTotal,document['getElementById'](_0x400446(0x17e))[_0x400446(0x17c)][_0x400446(0x18e)]=_0x400446(0x161),document[_0x400446(0x15f)]('end-screen')[_0x400446(0x17c)][_0x400446(0x18e)]=_0x400446(0x17f);const _0x41fd98=formatTiempo(tiempoTotalJuego);document[_0x400446(0x15f)](_0x400446(0x178))[_0x400446(0x17a)]=_0x41fd98;let _0xfbca02=paircardCount+pairOddCount;document['getElementById'](_0x400446(0x172))['innerText']=_0xfbca02,gameStarted=![];}function showcards(){const _0x16043d=_0x538dd8;if(!gameStarted)return;playButtonIcon[_0x16043d(0x17a)]=_0x16043d(0x18f),startStop();const _0x29314a=document[_0x16043d(0x15f)]('volumen-up'),_0xa543db=document[_0x16043d(0x15f)](_0x16043d(0x192)),_0x232bad=window[_0x16043d(0x186)](_0x29314a)[_0x16043d(0x18e)],_0x541c47=window[_0x16043d(0x186)](_0xa543db)[_0x16043d(0x18e)];_0x29314a[_0x16043d(0x17b)](_0x16043d(0x188),function(){const _0x4bf01e=_0x16043d;_0x232bad===_0x4bf01e(0x18a)&&(_0xa543db[_0x4bf01e(0x17c)][_0x4bf01e(0x18e)]=_0x4bf01e(0x18a),_0x29314a['style'][_0x4bf01e(0x18e)]=_0x4bf01e(0x161),volumen=![]);}),_0xa543db[_0x16043d(0x17b)](_0x16043d(0x188),function(){const _0x3a494c=_0x16043d;_0x541c47===_0x3a494c(0x161)&&(_0x29314a[_0x3a494c(0x17c)][_0x3a494c(0x18e)]=_0x3a494c(0x18a),_0xa543db['style']['display']=_0x3a494c(0x161),volumen=!![]);});const _0x13b7d5=document[_0x16043d(0x15f)]('cardcontainer');while(cardslist[_0x16043d(0x17d)]<0x8){const _0x3de354=getRandom();!cardslist[_0x16043d(0x182)](_0x3de354)&&(cardslist[_0x16043d(0x165)](_0x3de354),cardslist['push'](_0x3de354));}cardslist=shuffle(cardslist);for(let _0x4c7b78=0x0;_0x4c7b78<cardslist['length'];_0x4c7b78++){const _0x4d3be2=cardslist[_0x4c7b78],_0x3ae276=mainUrl+'/0'+_0x4d3be2+'.png',[_0x7e9b26,_0x57487a,_0x534559,_0x5db8e4,_0x181d48]=createFlipCard(_0x3ae276);_0x57487a[_0x16043d(0x171)](_0x5db8e4),_0x534559[_0x16043d(0x171)](_0x181d48),_0x7e9b26[_0x16043d(0x171)](_0x534559),_0x7e9b26[_0x16043d(0x171)](_0x57487a),_0x13b7d5[_0x16043d(0x171)](_0x7e9b26),_0x7e9b26[_0x16043d(0x17b)](_0x16043d(0x188),function(){const _0x3fa098=_0x16043d;if(clickCount>=0x2){clickCount=0x0;return;}clickCount++;if(_0x7e9b26[_0x3fa098(0x163)][_0x3fa098(0x18b)](_0x3fa098(0x18d)))return;_0x7e9b26[_0x3fa098(0x163)][_0x3fa098(0x184)](_0x3fa098(0x16d));const _0x22d348=_0x5db8e4['src'];selectedCard===null?(selectedCardPosicion=_0x4c7b78,selectedCard=_0x22d348,selectedCardElement=_0x7e9b26):selectedCard===_0x22d348?selectedCardPosicion!==_0x4c7b78&&(playWinshortSound(volumen),paircardCount+=0x1,setTimeout(()=>{const _0x42a8cf=_0x3fa098;_0x7e9b26['classList']['add'](_0x42a8cf(0x18d),_0x42a8cf(0x190)),selectedCardElement[_0x42a8cf(0x163)][_0x42a8cf(0x15d)](_0x42a8cf(0x18d),_0x42a8cf(0x190)),selectedCard=null;},0x30c),paircardCount===cardslist[_0x3fa098(0x17d)]/0x2&&(endGame(),playWinSound(volumen))):(playLoseSound(volumen),pairOddCount+=0x1,console[_0x3fa098(0x167)](_0x3fa098(0x16c)),console['log'](selectedCard),console[_0x3fa098(0x167)](_0x22d348),setTimeout(()=>{const _0x3fc09a=_0x3fa098;_0x7e9b26[_0x3fc09a(0x163)][_0x3fc09a(0x184)]('is-flipped'),selectedCardElement[_0x3fc09a(0x163)]['toggle']('is-flipped'),selectedCard=null;},0x30c));});}}function getRandom(){const _0x2a81e8=_0x538dd8;return Math[_0x2a81e8(0x179)](Math[_0x2a81e8(0x162)]()*0x8)+0x1;}function shuffle(_0x5378f3){const _0x690b00=_0x538dd8;let _0x4bf1d3=_0x5378f3[_0x690b00(0x17d)],_0x2f4d30,_0xd261c2;while(_0x4bf1d3!==0x0){_0xd261c2=Math[_0x690b00(0x179)](Math[_0x690b00(0x162)]()*_0x4bf1d3),_0x4bf1d3-=0x1,_0x2f4d30=_0x5378f3[_0x4bf1d3],_0x5378f3[_0x4bf1d3]=_0x5378f3[_0xd261c2],_0x5378f3[_0xd261c2]=_0x2f4d30;}return _0x5378f3;}let tiempoTotal=0x0,intervalo;function startStop(){tiempoTotal=0x0,detenerContador(),intervalo=setInterval(actualizarContador,0xa);}function detenerContador(){clearInterval(intervalo),intervalo=null;}function actualizarContador(){const _0x215be0=_0x538dd8;tiempoTotal+=0xa;const _0x25b7ef=Math[_0x215be0(0x179)](tiempoTotal/(0x3e8*0x3c)),_0x1a439b=Math[_0x215be0(0x179)](tiempoTotal%(0x3e8*0x3c)/0x3e8),_0x4c78ec=tiempoTotal%0x3e8,_0x1d9e9e=agregarCeros(_0x25b7ef)+':'+agregarCeros(_0x1a439b)+':'+agregarCerosMilisegundos(_0x4c78ec);document[_0x215be0(0x15f)](_0x215be0(0x174))['innerText']=_0x1d9e9e;}function agregarCeros(_0x3c1b64){return _0x3c1b64<0xa?'0'+_0x3c1b64:_0x3c1b64;}function agregarCerosMilisegundos(_0x4ac39e){if(_0x4ac39e<0xa)return'00'+_0x4ac39e;else{if(_0x4ac39e<0x64)return'0'+_0x4ac39e;}return _0x4ac39e;}function formatTiempo(_0x599eb2){const _0x4a0188=_0x538dd8,_0x547b9d=Math[_0x4a0188(0x179)](_0x599eb2/(0x3e8*0x3c)),_0x2c3b2b=Math['floor'](_0x599eb2%(0x3e8*0x3c)/0x3e8),_0x38d566=_0x599eb2%0x3e8;return agregarCeros(_0x547b9d)+':'+agregarCeros(_0x2c3b2b)+':'+agregarCerosMilisegundos(_0x38d566);}function createFlipCard(_0x45111e){const _0xab7805=_0x538dd8,_0x4147a7=document['createElement'](_0xab7805(0x170));_0x4147a7['className']='card\x20is-flipped';const _0x17c37e=document[_0xab7805(0x16e)](_0xab7805(0x170));_0x17c37e[_0xab7805(0x15e)]=_0xab7805(0x185);const _0xa85095=document['createElement'](_0xab7805(0x170));_0xa85095[_0xab7805(0x15e)]='card__face\x20card__face--back';const _0x3b5170=document['createElement'](_0xab7805(0x15b));_0x3b5170[_0xab7805(0x16b)]=_0x45111e;const _0x51ef4b=document[_0xab7805(0x16e)](_0xab7805(0x15b));return _0x51ef4b['src']=mainUrl+_0xab7805(0x177),[_0x4147a7,_0x17c37e,_0xa85095,_0x3b5170,_0x51ef4b];}function playWinSound(){const _0x21d4a1=_0x538dd8;volumen&&winSound[_0x21d4a1(0x160)]();}function playLoseSound(){const _0x3155dc=_0x538dd8;volumen&&loseSound[_0x3155dc(0x160)]();}function playWinshortSound(){volumen&&win_short['play']();}
+let gameStarted = false;
+let flippedCardCount = 0; 
+let paircardCount = 0; 
+let pairOddCount = 0; 
+let cardslist = [];
+let cardsDicc = {};
+const mainUrl = 'assets/img';
+let selectedCard = null;
+let selectedCardPosicion = null
+let clickCount = 0;
+const winSound = document.getElementById("winSound");
+const loseSound = document.getElementById("loseSound");
+const win_short = document.getElementById("win-short");
+let volumen = true;
+let tiempoTotalJuego = 0;
+
+// Empezar game
+function startGame() {
+  //Reiniciar values
+  flippedCardCount = 0;
+  paircardCount = 0;
+  pairOddCount = 0;
+  cardslist = [];
+  selectedCard = null;
+  selectedCardPosicion = null;
+  clickCount = 0;
+  tiempoTotalJuego = 0;
+
+  document.getElementById('content-container').style.display = 'block';
+  document.getElementById('start-screen').style.display = 'none';
+  document.getElementById('end-screen').style.display = 'none';
+  const cardContainer = document.getElementById('cardcontainer');
+  cardContainer.innerHTML = '';
+  gameStarted = true;
+  showcards();
+}
+function endGame() {
+  tiempoTotalJuego = tiempoTotal;
+  document.getElementById('content-container').style.display = 'none';
+  document.getElementById('end-screen').style.display = 'flex';
+  const tiempoTotalFormatted = formatTiempo(tiempoTotalJuego);
+  document.getElementById('tiempo-total').innerText = tiempoTotalFormatted;
+  let turned = paircardCount + pairOddCount;
+  document.getElementById('turn').innerText = turned;
+  gameStarted = false;
+}
+
+// Mostrar lista de cartas
+function showcards() {
+  if(!gameStarted) return;
+  //Cambia span play -> pause
+    playButtonIcon.innerText = 'pause_circle';
+    startStop();
+    const volume_up = document.getElementById('volumen-up');
+    const volume_off = document.getElementById('volumen-off');
+    const isDisplayBlock = window.getComputedStyle(volume_up).display;
+    const isDisplayOffBlock = window.getComputedStyle(volume_off).display;
+    volume_up.addEventListener('click',function() {
+      if( isDisplayBlock === 'block'){
+        volume_off.style.display = 'block';
+        volume_up.style.display = 'none';
+        volumen = false;
+      } 
+    });
+    volume_off.addEventListener('click',function() {
+      if( isDisplayOffBlock === 'none'){
+        volume_up.style.display = 'block';
+        volume_off.style.display = 'none';
+        volumen = true;
+      }
+    });
+    const cardContainer = document.getElementById('cardcontainer');
+    while (cardslist.length < 8) {
+        const numRandom = getRandom();
+
+        // Verifica si el número ya está en la lista
+        if (!cardslist.includes(numRandom)) {
+            cardslist.push(numRandom);
+            cardslist.push(numRandom);
+        }
+    }
+
+    // Mezclar la list
+    cardslist = shuffle(cardslist);
+
+
+    for (let i = 0; i < cardslist.length; i++) {
+      const numRandom = cardslist[i];
+      const imageUrlFront = `${mainUrl}/0${numRandom}.png`;
+      const [card, cardFront, cardBack, imageFront, imageBack] = createFlipCard(imageUrlFront);
+      
+      cardFront.appendChild(imageFront);
+      cardBack.appendChild(imageBack);
+      card.appendChild(cardBack);
+      card.appendChild(cardFront);
+      cardContainer.appendChild(card);
+  
+      // Event -> Click -> Mostrar imagen front
+      card.addEventListener('click', function () {
+        if (clickCount >= 2) {
+          clickCount = 0;
+          return;
+      }
+  
+      clickCount++;
+        
+        // Card alredy matched Do Nothing
+        if(card.classList.contains('matched')) {
+        return;
+        }
+        // Cambiar class -> Flipped
+        card.classList.toggle('is-flipped');
+        const clickedImageUrl = imageFront.src;
+        
+        if (selectedCard === null) {
+          selectedCardPosicion = i;
+          selectedCard = clickedImageUrl;
+          selectedCardElement = card;
+        } else {
+          // Coincidir TRUE
+          if (selectedCard === clickedImageUrl) {
+            if (selectedCardPosicion !== i) {
+              playWinshortSound(volumen);
+              paircardCount += 1;
+              setTimeout(() => {
+                card.classList.add('matched', 'selected');
+                selectedCardElement.classList.add('matched', 'selected');
+                selectedCard = null;
+              }, 780);
+              if (paircardCount === cardslist.length/2) {
+                endGame();
+                playWinSound(volumen);
+
+              }
+            }
+
+          // Coincidir FALSE
+          } else {
+            playLoseSound(volumen);
+            pairOddCount += 1;
+            console.log('¡Las cartas son diferentes!'); 
+            console.log(selectedCard);
+            console.log(clickedImageUrl); 
+            setTimeout(() => {
+              card.classList.toggle('is-flipped');
+              selectedCardElement.classList.toggle('is-flipped');
+              selectedCard = null;
+            }, 780);
+          }
+        }
+      }); 
+      
+    }
+    
+}
+
+
+
+// Get random number between 1 and 8
+function getRandom() {
+  return Math.floor(Math.random() * 8) + 1;
+}
+// Funcion mezclar
+function shuffle(array) {
+  let currentIndex = array.length;
+  let temporaryValue, randomIndex;
+
+  while (currentIndex !== 0) {
+      randomIndex = Math.floor(Math.random() * currentIndex);
+      currentIndex -= 1;
+
+      temporaryValue = array[currentIndex];
+      array[currentIndex] = array[randomIndex];
+      array[randomIndex] = temporaryValue;
+  }
+
+  return array;
+}
+
+//  TIME
+let tiempoTotal = 0;  
+let intervalo;  
+
+function startStop() {
+  tiempoTotal = 0;
+  detenerContador();  
+  intervalo = setInterval(actualizarContador, 10);
+}
+
+function detenerContador() {
+  clearInterval(intervalo);
+  intervalo = null;
+}
+
+function actualizarContador() {
+  tiempoTotal += 10;
+
+  const minutos = Math.floor(tiempoTotal / (1000 * 60));
+  const segundos = Math.floor((tiempoTotal % (1000 * 60)) / 1000);
+  const milisegundos = tiempoTotal % 1000;
+
+  const tiempoFormateado = `${agregarCeros(minutos)}:${agregarCeros(segundos)}:${agregarCerosMilisegundos(milisegundos)}`;
+
+  document.getElementById('contador').innerText = tiempoFormateado;
+}
+
+function agregarCeros(valor) {
+  return valor < 10 ? `0${valor}` : valor;
+}
+
+function agregarCerosMilisegundos(valor) {
+  if (valor < 10) {
+    return `00${valor}`;
+  } else if (valor < 100) {
+    return `0${valor}`;
+  }
+  return valor;
+}
+function formatTiempo(tiempo) {
+  const minutos = Math.floor(tiempo / (1000 * 60));
+  const segundos = Math.floor((tiempo % (1000 * 60)) / 1000);
+  const milisegundos = tiempo % 1000;
+  return `${agregarCeros(minutos)}:${agregarCeros(segundos)}:${agregarCerosMilisegundos(milisegundos)}`;
+}
+
+// Function Create HTML
+function createFlipCard(imageUrlFront){
+  const card = document.createElement('div');
+  card.className = 'card is-flipped';
+
+  const cardFront = document.createElement('div');
+  cardFront.className = 'card__face card__face--front';
+  
+  const cardBack = document.createElement('div');
+  cardBack.className = 'card__face card__face--back';
+  
+  const imageFront = document.createElement('img');
+  imageFront.src = imageUrlFront;
+  
+  // Image for the back (00.png)
+  const imageBack = document.createElement('img');
+  imageBack.src = `${mainUrl}/00.png`;
+  return [card, cardFront, cardBack, imageFront, imageBack];
+}
+// Play sound
+function playWinSound() {
+  if (volumen) {
+    winSound.play();
+  }
+}
+
+function playLoseSound() {
+  if (volumen) {
+    loseSound.play();
+  }
+}
+function playWinshortSound() {
+  if (volumen) {
+    win_short.play();
+  }
+}
+
