@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pon apruba tu memoria!!</title>
+    <link rel="stylesheet" href="./assets/style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+    <header>
+        <div class="nav">
+            <div class="logo">
+                <span class="material-symbols-outlined">
+                playing_cards
+                </span></div>
+            <div class="ranking">
+                <div class="global">
+                    <span class="material-symbols-outlined">
+                    military_tech
+                    </span>
+                    <p>Me</p>
+                </div>
+                <div class="local">
+                    <span class="material-symbols-outlined">
+                        public
+                    </span>
+                    <p>Global</p>
+                </div>
+            </div>
+            <div class="user">
+                <span class="material-symbols-outlined">
+                    person 
+                    </span>
+            </div>
+        </div>
+    </header>
+    <main>
+        <div id="start-screen">
+            <h1>Let´s Play</h1>
+            <div class="icon">
+                <button class="replayButton" onclick="startGame()">
+                    <span id="playButtonIcon" class="material-symbols-outlined">
+                        play_circle
+                    </span>
+                </button>
+            </div>
+        </div>
+        <div id="content-container" style="display: none;">
+            <div class="cron">
+                <div class="puntuation">
+                    <div class="puntos">100</div>
+                    <div>
+                        <span class="material-symbols-outlined">
+                        sports_score
+                        </span>
+                    </div> 
+                </div>
+                <div class="time">
+                    <div id="contador">00:00:00</div>
+                    <div>
+                        <span class="material-symbols-outlined">
+                            timer
+                        </span>
+                    </div>
+                </div>
+                <div class="icon">
+                    <button class="play" onclick="startGame()">
+                        <span id="playButtonIcon" class="material-symbols-outlined">
+                            play_circle
+                        </span>
+                    </button>
+                </div>
+                <div class="sound" >
+                    <div id="volumen-up">
+                        <span class="material-symbols-outlined">
+                            volume_up
+                        </span>
+                    </div>
+                    <div id="volumen-off" style="display: none;">
+                        <span class="material-symbols-outlined">
+                            volume_off
+                        </span>
+                    </div>
+                </div>
+            </div>
+            
+            <div id="cardcontainer"></div>
+        </div>
+        <div id="end-screen" style="display: none;">
+            <div class="end-puntutation">
+                <h1>Score:</h1>
+                <!-- <div class="puntuation">999+</div> -->
+                <div class="time">Time: <span id="tiempo-total">00:00:00</span></div>
+                <div class="turn">Turn: <span id="turn">100</span></div>
+            </div>
+            <div class="replay">
+                <h3>REPLAY:</h3>
+                <div class="icon">
+                    <button class="replayButton" onclick="startGame()">
+                        <span id="playButtonIcon" class="material-symbols-outlined">
+                            replay
+                        </span>
+                    </button>
+                </div>
+            </div>
+            <!-- Audio-->
+            <audio id="winSound">
+                <source src="./assets/audio/victory.mp3" type="audio/mpeg">
+                Your browser does not support the audio element.
+            </audio>
+            <audio id="loseSound">
+                <source src="./assets/audio/lose.mp3" type="audio/mp4">
+                Your browser does not support the audio element.
+            </audio>
+            <audio id="win-short">
+                <source src="./assets/audio/win-short.mp3" type="audio/mp4">
+                Your browser does not support the audio element.
+            </audio>
+              
+        </div>
+    </main>
+    <footer>
+        <div>Julio e Issam &#169; 2023</div>
+        <div class="social-icons">
+            <a target="_blank" href="https://www.linkedin.com/in/julio-daniel-azurduy-montalvo-70aba5244" class="fa fa-linkedin"> </a>
+            <a target="_blank" href="https://github.com/DanJuaz/GameCards" class="fa fa-github"> </a>
+        </div>
+      </footer>
+    <script src="./script.js"></script>
+</body>
+</html>
