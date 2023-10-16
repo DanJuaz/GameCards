@@ -86,7 +86,7 @@ function showcards() {
 
     for (let i = 0; i < cardslist.length; i++) {
       const numRandom = cardslist[i];
-      const imageUrlFront = `${mainUrl}/0${numRandom}.png`;
+      const imageUrlFront = `${mainUrl}/0${numRandom}.webp`;
       const [card, cardFront, cardBack, imageFront, imageBack] = createFlipCard(imageUrlFront);
       
       cardFront.appendChild(imageFront);
@@ -237,9 +237,9 @@ function createFlipCard(imageUrlFront){
   const imageFront = document.createElement('img');
   imageFront.src = imageUrlFront;
   
-  // Image for the back (00.png)
+  // Image for the back (00.webp)
   const imageBack = document.createElement('img');
-  imageBack.src = `${mainUrl}/00.png`;
+  imageBack.src = `${mainUrl}/00.webp`;
   return [card, cardFront, cardBack, imageFront, imageBack];
 }
 // Play sound
