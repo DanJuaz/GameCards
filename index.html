@@ -51,7 +51,7 @@
         <div id="content-container" style="display: none;">
             <div class="cron">
                 <div class="puntuation">
-                    <div class="puntos">100</div>
+                    <div id="score" class="puntos">0</div>
                     <div>
                         <span class="material-symbols-outlined">
                         sports_score
@@ -65,13 +65,6 @@
                             timer
                         </span>
                     </div>
-                </div>
-                <div class="icon">
-                    <button class="play" onclick="startGame()">
-                        <span id="playButtonIcon" class="material-symbols-outlined">
-                            play_circle
-                        </span>
-                    </button>
                 </div>
                 <div class="sound" >
                     <div id="volumen-up">
@@ -92,7 +85,7 @@
         <div id="end-screen" style="display: none;">
             <div class="end-puntutation">
                 <h1>Score:</h1>
-                <!-- <div class="puntuation">999+</div> -->
+                <div class="puntuation"> <span id="score-f"> 0 </span></div>
                 <div class="time">Time: <span id="tiempo-total">00:00:00</span></div>
                 <div class="turn">Turn: <span id="turn">100</span></div>
             </div>
@@ -123,7 +116,7 @@
         </div>
     </main>
     <footer>
-        <div>Julio e Issam &#169; 2023</div>
+        <div>Julio 2023</div>
         <div class="social-icons">
             <a target="_blank" href="https://www.linkedin.com/in/julio-daniel-azurduy-montalvo-70aba5244" class="fa fa-linkedin"> </a>
             <a target="_blank" href="https://github.com/DanJuaz/GameCards" class="fa fa-github"> </a>
