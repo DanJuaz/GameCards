@@ -14,6 +14,9 @@ const win_short = document.getElementById("win-short");
 let volumen = true;
 let tiempoTotalJuego = 0;
 
+let score = 0;
+let scoreElement = document.getElementById('score');
+
 // Empezar game
 function startGame() {
   //Reiniciar values
@@ -25,6 +28,8 @@ function startGame() {
   selectedCardPosicion = null;
   clickCount = 0;
   tiempoTotalJuego = 0;
+  score = 0;
+  scoreElement.innerText = score;
 
   document.getElementById('content-container').style.display = 'block';
   document.getElementById('start-screen').style.display = 'none';
@@ -42,6 +47,7 @@ function endGame() {
   document.getElementById('tiempo-total').innerText = tiempoTotalFormatted;
   let turned = paircardCount + pairOddCount;
   document.getElementById('turn').innerText = turned;
+  document.getElementById('score-f').innerText = score;
   gameStarted = false;
 }
 
@@ -126,7 +132,10 @@ function showcards() {
                 card.classList.add('matched', 'selected');
                 selectedCardElement.classList.add('matched', 'selected');
                 selectedCard = null;
+                score += 50;
+                scoreElement.innerText = score;
               }, 780);
+              
               if (paircardCount === cardslist.length/2) {
                 endGame();
                 playWinSound(volumen);
@@ -138,18 +147,19 @@ function showcards() {
           } else {
             playLoseSound(volumen);
             pairOddCount += 1;
-            console.log('¡Las cartas son diferentes!'); 
-            console.log(selectedCard);
-            console.log(clickedImageUrl); 
+            // console.log('¡Las cartas son diferentes!'); 
+            // console.log(selectedCard);
+            // console.log(clickedImageUrl); 
             setTimeout(() => {
               card.classList.toggle('is-flipped');
               selectedCardElement.classList.toggle('is-flipped');
               selectedCard = null;
+              score -= 15;
+              scoreElement.innerText = score;
             }, 780);
           }
         }
-      }); 
-      
+      });
     }
     
 }
